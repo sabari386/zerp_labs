@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+      "sourceMap": true,
+      "target": "es5",
+      "lib": ["es6", "dom"],
+      "types": ["reflect-metadata", "jest"],
+      "module": "commonjs",
+      //"esModuleInterop": true,
+      "moduleResolution": "node",
+      "typeRoots": [ "./@types/", "./node_modules/@types" ],
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true
+  }
+}
+

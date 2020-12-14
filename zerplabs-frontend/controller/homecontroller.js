@@ -72,7 +72,7 @@ appFactories.factory('userFactory', function ($http) {
                 url: baseUrl.concat("/addPatientDetails"),
                 data: params,
                 cache: true
-            }).success(callback).error(callback);
+            }).success(callback);
         }
     };
 });
@@ -85,7 +85,12 @@ appControllers.controller('HomeCtrl', function ($scope, $filter, userFactory, $l
     
     $scope.getUserList = function () {
         userFactory.list(function (users) {
-            $scope.users = users.data;
+            if(users){
+                $scope.users = users.data;
+            }else{
+                console.log("No user found");
+            }
+            
         });
     }
 

@@ -18,6 +18,4 @@ import MongoDb from '../mongoDb'
 const dbContainer = new Container();
 dbContainer.bind<IMongoDB>(dbTypes.IMongoDB).to(MongoDb);
 
-
-
 export default dbContainer;
